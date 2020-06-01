@@ -12,6 +12,10 @@
   clip-path: polygon(5% 0, 100% 0, 100% 75vh, 0 100%, 0% 5%);
   position: relative;
 
+  @media (min-resolution: 192dpi) and (min-width: 600px) {
+    //  changet the background image to a high resolution depending on resolution and width
+  }
+
   @include respond(phone) {
     clip-path: polygon(5% 0, 100% 0, 100% 85vh, 0 100%, 0% 5%);
   }

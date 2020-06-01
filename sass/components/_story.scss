@@ -10,6 +10,18 @@
   position: relative;
   background-color: rgba($color-white, 0.6);
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 6rem;
+  }
+  @include respond(phone) {
+    width: 100%;
+    padding: 2rem;
+    padding-left: 4rem;
+    transform: skewX(0);
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -20,6 +32,10 @@
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-2rem) skewX(7deg);
     overflow: hidden;
+
+    @include respond(phone) {
+      transform: translateX(-2rem) skewX(0);
+    }
   }
 
   &__image {
@@ -32,6 +48,9 @@
 
   &__text {
     transform: skewX(7deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {
